@@ -1,0 +1,100 @@
+<xml xmlns="http://www.w3.org/1999/xhtml" collection="true">
+  <variables>
+    <variable type="" id="]O~YI@:Q8[,o5[;](qE8">rsi05</variable>
+    <variable type="" id="o;GqS%C,x?k+]pFYY{9~">i</variable>
+  </variables>
+  <block type="procedures_defreturn" id="xS6jCYwbu[LMBN_oj)@}" x="0" y="0">
+    <field name="NAME">loadrsi05</field>
+    <comment pinned="false" h="80" w="160">Describe this function...</comment>
+    <statement name="STACK">
+      <block type="variables_set" id="E3DT,FnUg3QwLcf1|B/J">
+        <field name="VAR" id="]O~YI@:Q8[,o5[;](qE8" variabletype="">rsi05</field>
+        <value name="VALUE">
+          <block type="rsi" id="U1`4*0,md$ja|26W0}YK">
+            <value name="INPUT">
+              <block type="ohlc_values" id="gKRb-R*bPfq8xtc?rSz2" disabled="true">
+                <field name="OHLCFIELD_LIST">close</field>
+                <field name="CANDLEINTERVAL_LIST">60</field>
+              </block>
+            </value>
+            <value name="PERIOD">
+              <shadow type="math_number" id="vK[58g?xN0{Z1?n1YBOm">
+                <field name="NUM">5</field>
+              </shadow>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="controls_if" id="O!}pH7#X5@aVB{pwif?o">
+            <mutation elseif="1" else="1"></mutation>
+            <value name="IF0">
+              <block type="logic_compare" id="oyYgWlV)wyc-P6],JeBo">
+                <field name="OP">GT</field>
+                <value name="A">
+                  <block type="variables_get" id="U+8`cvI$%XOV|0.cCY_o">
+                    <field name="VAR" id="]O~YI@:Q8[,o5[;](qE8" variabletype="">rsi05</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="3m^2lfPZh`LoJZ2bEuXi">
+                    <field name="NUM">70</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="variables_set" id="w^%.8b~P`[CIo$ux!n9^">
+                <field name="VAR" id="o;GqS%C,x?k+]pFYY{9~" variabletype="">i</field>
+                <value name="VALUE">
+                  <block type="math_number" id="4qbjByc3YF,F1db6.=xV">
+                    <field name="NUM">1</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+            <value name="IF1">
+              <block type="logic_compare" id="YmSo3HI?WWKMsKSS+w3L">
+                <field name="OP">LT</field>
+                <value name="A">
+                  <block type="variables_get" id="_m[6@wrp!_G_bC%eVH+_">
+                    <field name="VAR" id="]O~YI@:Q8[,o5[;](qE8" variabletype="">rsi05</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="$G+fq#-Aye6WdY:(/__.">
+                    <field name="NUM">30</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO1">
+              <block type="variables_set" id="{=qQK+e+9M2Fe]Xn60ND">
+                <field name="VAR" id="o;GqS%C,x?k+]pFYY{9~" variabletype="">i</field>
+                <value name="VALUE">
+                  <block type="math_number" id="87B25#iu9_h@17+pHPQc">
+                    <field name="NUM">2</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+            <statement name="ELSE">
+              <block type="variables_set" id="RU/avan:zn`oRgqY:ey#">
+                <field name="VAR" id="o;GqS%C,x?k+]pFYY{9~" variabletype="">i</field>
+                <value name="VALUE">
+                  <block type="math_number" id="EeNdrYd--aF%R=/:5Zl!">
+                    <field name="NUM">0</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <value name="RETURN">
+      <block type="variables_get" id="Vs5n)zpee_.}t2QZh$i?">
+        <field name="VAR" id="o;GqS%C,x?k+]pFYY{9~" variabletype="">i</field>
+      </block>
+    </value>
+  </block>
+</xml>
